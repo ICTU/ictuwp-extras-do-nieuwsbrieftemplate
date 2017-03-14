@@ -6,7 +6,6 @@ Deze template moet geplaatst worden in de folder 'extensions'. Dat houdt in dat 
 ```/wp-content/extensions/newsletter/emails/themes/digitale-overheid```
 
 
-Ontwikkelaar: Paul van Buuren (paul@wbvb.nl)
 Versie: 1.0.0
 
 ## Contact
