@@ -22,8 +22,9 @@ $theme_defaults = array(
     'theme_max_posts'   =>  5,
     'theme_max_agenda'  =>  5,
     'theme_read_more'   =>  'Lees meer',
-    'theme_colofon_block_1'      =>  'Dit is een publicatie van de ministeries van Binnenlandse Zaken en Koninkrijksrelaties en van Economische Zaken.',
-    'theme_colofon_block_2'      =>  'Heeft u tips of leuk nieuws voor de nieuwsbrief? Wij horen  graag van u! Stuur een email naar <a href="mailto:redactie@digitaleoverheid.nl">redactie@digitaleoverheid.nl</a>',
+    'theme_nieuwsbrieftitel'    =>  'Digitale Overheid - {date}',
+    'theme_colofon_block_1'     =>  'Dit is een publicatie van de ministeries van Binnenlandse Zaken en Koninkrijksrelaties en van Economische Zaken.',
+    'theme_colofon_block_2'     =>  'Heeft u tips of leuk nieuws voor de nieuwsbrief? Wij horen  graag van u! Stuur een email naar <a href="mailto:redactie@digitaleoverheid.nl">redactie@digitaleoverheid.nl</a>',
     'theme_colofon_block_3'      =>  'Digitale Overheid is ook te volgen op Twitter: <a href="https://twitter.com/digioverheid">@digioverheid</a>',
     'theme_categories'  =>  array()
     );
@@ -31,14 +32,16 @@ $theme_defaults = array(
 // Mandatory!
 $controls->merge_defaults($theme_defaults);
 ?>
-<h1>Preselectie</h1>
+<table class="form-table">
+
+<tr><td colspan="2">
+<h2>Preselectie</h2>
 
 <p>Je kunt de nieuwsbrief automatisch laten vullen met nieuwsberichten. </p>
 <p>Met het aantal berichten bepaal je het maximum aantal berichten dat hierna automatisch aan je nieuwsbrief wordt toegevoegd.<br>
   De makkelijkste methode om de berichten die je in de nieuwsbrief wilt hebben tijdelijk te voorzien van een tag, zoals 'nieuwsbrief'. Deze tag kun je dan hieronder invoeren bij 'Filter op tag'; het wordt een criterium om de nieuwsberichten voor je nieuwsbrief automatisch te selecteren.<br>Je kunt de preselectie van nieuwsberichten ook beperken tot een categorie.</p>
 
-<table class="form-table">
-
+</td></tr>
     <tr valign="top">
         <th>Piwik-trackercode</th>
         <td>
@@ -81,6 +84,14 @@ $controls->merge_defaults($theme_defaults);
     </tr>
 
 
+    <tr valign="top">
+        <th>Titel in de nieuwsbrief</th>
+        <td>
+            <?php $controls->textarea('theme_nieuwsbrieftitel' ); ?>
+            <p> <code>{date}</code> is <em lang="en">placeholder</em> voor de datum; bij het versturen van de nieuwsbrief wordt deze vervangen door de datum</p>
+          <p>&nbsp;</p>
+        </td>
+    </tr>
     <tr valign="top">
         <th>Colofon - blok 1</th>
         <td>

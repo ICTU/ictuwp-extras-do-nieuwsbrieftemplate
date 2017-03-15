@@ -69,6 +69,9 @@ $font       = isset( $theme_options['theme_font'] ) ? $theme_options['theme_font
 $font_size  = isset( $theme_options['theme_font_size'] ) ? $theme_options['theme_font_size'] : '';
 
 
+
+
+$theme_nieuwsbrieftitel  = isset( $theme_options['theme_nieuwsbrieftitel'] ) ? $theme_options['theme_nieuwsbrieftitel'] : 'Digitale Overheid - {date}';
 $colofon_blok1  = isset( $theme_options['theme_colofon_block_1'] ) ? $theme_options['theme_colofon_block_1'] : 'Dit is een publicatie van de ministeries van Binnenlandse Zaken en Koninkrijksrelaties en van Economische Zaken.';
 $colofon_blok2  = isset( $theme_options['theme_colofon_block_2'] ) ? $theme_options['theme_colofon_block_2'] : 'Heeft u tips of leuk nieuws voor de nieuwsbrief? Wij horen  graag van u! Stuur een email naar <a href="mailto:redactie@digitaleoverheid.nl">redactie@digitaleoverheid.nl</a>';
 $colofon_blok3  = isset( $theme_options['theme_colofon_block_3'] ) ? $theme_options['theme_colofon_block_3'] : 'Digitale Overheid is ook te volgen op Twitter: <a href="https://twitter.com/digioverheid">@digioverheid</a>';
@@ -150,8 +153,7 @@ table {
             <table class="text" style="background-color: #fff; border-collapse: collapse">
               <tr>
                 <td style="padding: 30px 20px 0 20px">
-                  <div style="font: normal 20px arial, sans-serif; margin: 0; color: #000">Digitale Overheid - betrouwbaar, veilig, betaalbaar</div>
-                  <div style="font: normal 16px arial, sans-serif; margin: 6px 0 0 0; color: #000">Nieuwsbrief - {date}</div>
+                  <div style="font: normal 20px arial, sans-serif; margin: 0; color: #000"><?php echo $theme_nieuwsbrieftitel ?></div>
                   
               </tr>
               <tr>
